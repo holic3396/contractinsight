@@ -1,0 +1,91 @@
+:root {
+    --background-color: #0a0a0a;
+    --text-color: #e5e5e5;
+    --primary-color: #a855f7;
+    /* purple-500 */
+    --secondary-text-color: #a3a3a3;
+    /* gray-400 */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('images/hero-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+main .content h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+main .content .subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 2rem;
+}
+
+main .content .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+    margin-bottom: 2.5rem;
+}
+
+main .content .description a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+main .content .description a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.875rem;
+    color: var(--secondary-text-color);
+}
